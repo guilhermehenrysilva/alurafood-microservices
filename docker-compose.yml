@@ -1,7 +1,7 @@
 version: '3.3'
 services:
-  db:
-    image: mysql:5.7
+  db-pagamentos:
+    image: mysql:8.0.29
     restart: always
     environment:
       MYSQL_DATABASE: 'alurafood-pagamento'
@@ -19,7 +19,7 @@ services:
       - '3306'
       # Where our data will be persisted
     volumes:
-      - my-db:/var/lib/mysql
+      - vol-db-pagamentos:/var/lib/mysql
 # Names our volume
 volumes:
-  my-db:
+  vol-db-pagamentos:
