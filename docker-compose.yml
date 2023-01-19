@@ -1,25 +1,25 @@
 version: '3.3'
 services:
-  db-pagamentos:
+  db-microservices:
     image: mysql:8.0.29
     restart: always
     environment:
-      MYSQL_DATABASE: 'alurafood-pagamento'
-      # So you don't have to use root, but you can if you like
+      # Database Name
+      #MYSQL_DATABASE: 'databaseName'
+      # Acesso padrão (Não obrigatorio)
       MYSQL_USER: 'mysql'
-      # You can use whatever password you like
       MYSQL_PASSWORD: 'mysql'
-      # Password for root access
+      # Acesso Root (Necessario para criar database se não existir)
       MYSQL_ROOT_PASSWORD: 'root'
     ports:
-      # <Port exposed> : < MySQL Port running inside container>
+      # <Porta local exposta> : <Porta no container exposta>
       - '3306:3306'
     expose:
-      # Opens port 3306 on the container
+      # Abrir porta X no container
       - '3306'
-      # Where our data will be persisted
+      # Onde nossos dados serão persistidos
     volumes:
-      - vol-db-pagamentos:/var/lib/mysql
-# Names our volume
+      - vol-db-microservices:/var/lib/mysql
+# Volumes
 volumes:
-  vol-db-pagamentos:
+  vol-db-microservices:
