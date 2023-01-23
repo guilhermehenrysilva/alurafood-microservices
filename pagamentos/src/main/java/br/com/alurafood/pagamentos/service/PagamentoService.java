@@ -71,4 +71,20 @@ public class PagamentoService {
         pedidoClient.atualizaPagamento(pagamento.get().getPedidoId()); //Chamada síncrona do MicroService: pedidos-ms
     }
 
+    /*
+     FallBack - Plano B, caso o nosso serviço de Pedidos esteja fora do ar...
+     Altera o Status do Pagamento para: CONFIRMADO_SEM_INTEGRACAO. E não realiza a chamada do MS PedidoClient.
+     Poderiamos montar um Schedule para atualizar todos os pedidos para: PAGO... No qual os pagamentos forem de status: CONFIRMADO_SEM_INTEGRACAO.
+    */
+    public void alteraStatus(Long id) {
+        Optional<Pagamento> pagamento = repository.findById(id);
+
+        if (!pagamento.isPresent()) {
+            throw new EntityNotFoundException();
+        }
+
+        pagamento.get().setStatus(Status.CONFIRMADO_SEM_INTEGRACAO);
+        repository.save(pagamento.get());
+    }
+
 }
