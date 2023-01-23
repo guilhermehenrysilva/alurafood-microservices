@@ -27,6 +27,7 @@ docker-compose up
  
  - Spring Cloud Gateway, obtém a lista de endereços de todos os serviços registrados no Eureka Server, configura uma rota dinâmica para esses serviços e já faz o balanceamento de carga nas requisições.
 
+ - OpenFeign, utilizado para a comunicação síncrona dos microserviços.
 ---
 
 Made with 💟 by [Guilherme Silva.](https://github.com/guilhermehenrysilva) 
