@@ -23,11 +23,13 @@ docker-compose up
 ```
 
 ## 🔶 Service's description
- - Eureka Server é o serviço que faz o service registry e mantém o catálogo de todos os serviços registrados.
+ - <b>Eureka Server</b> é o serviço que faz o service registry e mantém o catálogo de todos os serviços registrados.
  
- - Spring Cloud Gateway, obtém a lista de endereços de todos os serviços registrados no Eureka Server, configura uma rota dinâmica para esses serviços e já faz o balanceamento de carga nas requisições.
+ - <b>Spring Cloud Gateway</b>, obtém a lista de endereços de todos os serviços registrados no Eureka Server, configura uma rota dinâmica para esses serviços e já faz o balanceamento de carga nas requisições.
 
- - OpenFeign, utilizado para a comunicação síncrona dos microserviços.
+ - <b>OpenFeign</b>, utilizado para a comunicação síncrona dos microserviços.
+
+ - <b>Resilience4j (Circuit Breaker)</b>, utilizado para elaboração de um FallBack (Plano B) caso não consigamos comunicação com algum microserviço.
 ---
 
 Made with 💟 by [Guilherme Silva.](https://github.com/guilhermehenrysilva) 
