@@ -34,8 +34,12 @@ docker-compose up
 
 ### Capitulo 2:
  - Como opção de Cloud, utilizamos a AWS para hospedagem de nossa API.
- - <b>AWS CLI (AWS Command Line Interface)</b> é utilizado como intermédio para realizar nossas ações na aws através do terminal.   
+
+ - <b>AWS IAM (Identity and Access Manager)</b> gerencia com segurança as identidades e especifica quem ou o que pode acessar cada serviço ou recurso na AWS.
+
+ - <b>AWS CLI (AWS Command Line Interface)</b> utilizado como intermédio para realizar nossas ações pelo terminal atraves de uma credencial IAM configurada na aws.   
 Doc: https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html
+
  - <b>AWS CDK (AWS Cloud Development Kit)</b> utilizado para a construção de nossa infraestrutura através de uma linguagem especifica.
 Doc: https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html
 
