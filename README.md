@@ -23,6 +23,7 @@ docker-compose up
 ```
 
 ## 🔶 Service's description
+### Capitulo 1:
  - <b>Eureka Server</b> é o serviço que faz o service registry e mantém o catálogo de todos os serviços registrados.
  
  - <b>Spring Cloud Gateway</b>, obtém a lista de endereços de todos os serviços registrados no Eureka Server, configura uma rota dinâmica para esses serviços e já faz o balanceamento de carga nas requisições.
@@ -30,6 +31,14 @@ docker-compose up
  - <b>OpenFeign</b>, utilizado para a comunicação síncrona dos microserviços.
 
  - <b>Resilience4j (Circuit Breaker)</b>, utilizado para elaboração de um FallBack (Plano B) caso não consigamos comunicação com algum microserviço.
+
+### Capitulo 2:
+ - Como opção de Cloud, utilizamos a AWS para hospedagem de nossa API.
+ - <b>AWS CLI (AWS Command Line Interface)</b> é utilizado como intermédio para realizar nossas ações na aws através do terminal.   
+Doc: https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html
+ - <b>AWS CDK (AWS Cloud Development Kit)</b> utilizado para a construção de nossa infraestrutura através de uma linguagem especifica.
+Doc: https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html
+
 ---
 
 Made with 💟 by [Guilherme Silva.](https://github.com/guilhermehenrysilva) 
