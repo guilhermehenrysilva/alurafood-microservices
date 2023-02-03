@@ -26,6 +26,11 @@ cdk bootstrap aws://ACCOUNT-NUMBER/REGION Ex: cdk bootstrap aws://701603830239/u
 ```
 Doc: https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html
 
+- Realizar deploy do Rds:
+```
+cdk deploy --parameters Rds:senha=12345678 Rds
+```
+
 ---
 ### Anotações
 - Cada Stack file representa uma camada de nossa infraestrutura na Cloud:

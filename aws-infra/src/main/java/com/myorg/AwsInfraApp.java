@@ -17,6 +17,9 @@ public class AwsInfraApp {
         AwsClusterStack clusterStack = new AwsClusterStack(app, "Cluster", vpcStack.getVpc());
         clusterStack.addDependency(vpcStack); //priority - O Vpc precisa ser criado primeiro em relação ao cluster
 
+        AwsRdsStack rdsStack = new AwsRdsStack(app, "Rds", vpcStack.getVpc());
+        rdsStack.addDependency(vpcStack);
+
         AwsServiceStack serviceStack = new AwsServiceStack(app, "Service", clusterStack.getCluster());
         serviceStack.addDependency(clusterStack);
 
