@@ -8,6 +8,9 @@ import software.constructs.Construct;
 
 // Cluster
 public class AwsClusterStack extends Stack {
+
+    private Cluster cluster;
+
     public AwsClusterStack(final Construct scope, final String id, final Vpc vpc) {
         this(scope, id, null, vpc);
     }
@@ -15,8 +18,13 @@ public class AwsClusterStack extends Stack {
     public AwsClusterStack(final Construct scope, final String id, final StackProps props, final Vpc vpc) {
         super(scope, id, props);
 
-        Cluster cluster = Cluster.Builder.create(this, "AluraCluster")
+        cluster = Cluster.Builder.create(this, "AluraCluster")
                 .clusterName("cluster-alura")
                 .vpc(vpc).build();
     }
+
+    public Cluster getCluster() {
+        return cluster;
+    }
+
 }
