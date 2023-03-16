@@ -22,6 +22,7 @@ public class AwsInfraApp {
 
         AwsServiceStack serviceStack = new AwsServiceStack(app, "Service", clusterStack.getCluster());
         serviceStack.addDependency(clusterStack);
+        serviceStack.addDependency(rdsStack);
 
         app.synth();
     }

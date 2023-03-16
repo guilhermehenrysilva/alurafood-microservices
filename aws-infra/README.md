@@ -1,4 +1,4 @@
-# Welcome to your CDK Java project!
+# Welcome to your CDK Java project! (**aws-infra**)
 
 This is a blank project for CDK development with Java.
 
