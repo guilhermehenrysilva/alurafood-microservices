@@ -1,4 +1,5 @@
 version: '3.3'
+
 services:
   db-microservices:
     image: mysql:8.0.29
@@ -20,6 +21,25 @@ services:
       # Onde nossos dados serão persistidos
     volumes:
       - vol-db-microservices:/var/lib/mysql
-# Volumes
+
+  rabbitmq:
+    build:
+      context: .
+      dockerfile: dockerfile-rabbitmq
+    ports:
+      - "5673:5672"
+      - "15673:15672"
+      - "61614:61612"
+    restart: always
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+      - RABBITMQ_DEFAULT_VHOST=/
+    volumes:
+      - vol-rabbitmq:/var/lib/rabbitmq
+      - vol-rabbitmq-plugins:/var/lib/rabbitmq/enabled_plugins
+
 volumes:
   vol-db-microservices:
+  vol-rabbitmq:
+  vol-rabbitmq-plugins:
