@@ -1,4 +1,9 @@
-<h2 align="center"><b>Alura Food MicroService's</b></h2>
+<h2 align="center"> <b> Alura Food MicroServices - Java com arquitetura de Microsserviços, Spring e RabbitMQ </b> </h2>
+
+https://github.com/guilhermehenrysilva/alurafood-microservices/assets/78513892/a143e87b-d48e-4a46-8184-fc1414e3cf8e
+
+## ✅ Trilha de formação
+https://cursos.alura.com.br/formacao-java-microsservicos
 
 ## ✅ Information
 Microservices:
