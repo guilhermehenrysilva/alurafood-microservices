@@ -1,6 +1,4 @@
 
-}
-Mpagamentos/src/main/java/br/com/alurafood/pagamentos/config/Configuracao.java,7/0/70d9d9c77b0004b56d04c09a044e0c7ef1e7c275
 ?
 pagamentos/mvnw,6/c/6cda2fcda69058359c5520bcd90b212d40ac1659
 s
@@ -15,16 +13,6 @@ Fgateway/src/main/java/br/com/alurafood/gateway/GatewayApplication.java,4/2/424
 Opedidos/src/main/java/br/com/alurafood/pedidos/controller/PedidoController.java,0/0/009321273f0333db2e98b12fae686d5579e47bb3
 z
 Jpagamentos/src/main/java/br/com/alurafood/pagamentos/dto/PagamentoDto.java,c/7/c74f448c29f400dd186cef9cf3788489c97d4d91
-‚
-Rpagamentos/src/main/java/br/com/alurafood/pagamentos/service/PagamentoService.java,5/1/51171d17a918a4b0c2acb53498333fdb6fce614e
-{
-Kpagamentos/src/main/java/br/com/alurafood/pagamentos/http/PedidoClient.java,3/d/3d53fd1ccf706caa737d9d5dc46195e7168a2c1b
-ˆ
-Xpagamentos/src/main/java/br/com/alurafood/pagamentos/controller/PagamentoController.java,7/c/7cc899c8dee83de5d5f3f963d4fa054205c269a4
-
-Opagamentos/src/main/java/br/com/alurafood/pagamentos/PagamentosApplication.java,a/f/af21c487e0c8b260b65107fe0ec837204c881eb8
-B
-pagamentos/pom.xml,f/b/fb1ca7313fdcbb0ef2637cc113c4cd811856bccf
 B
 pedidos/Dockerfile,0/c/0c406c4b7a198b4d4aa277a2cd1b1303b25d61f5
 p
@@ -59,3 +47,25 @@ f
 6aws-infra/src/main/java/com/myorg/AwsServiceStack.java,5/2/52e093e8dc6a341fe970f8e74fdca956b2d0b46e
 C
 aws-infra/README.md,7/6/76706fcac49913e312b1a70465ed7d75b9cfa02d
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+b
+2aws-infra/src/main/java/com/myorg/AwsInfraApp.java,5/d/5db875afa614ec7f9b33ecce449275b91ff04ee2
+C
+dockerfile-rabbitmq,1/2/12462602bb0fb49ce648f76a3207decc1ff36399
+B
+docker-compose.yml,3/5/35b8c13cf2eb2a194eada000eb310d65aed53b2a
+{
+Kpagamentos/src/main/java/br/com/alurafood/pagamentos/http/PedidoClient.java,3/d/3d53fd1ccf706caa737d9d5dc46195e7168a2c1b
+}
+Mpagamentos/src/main/java/br/com/alurafood/pagamentos/config/Configuracao.java,7/0/70d9d9c77b0004b56d04c09a044e0c7ef1e7c275
+ˆ
+Xpagamentos/src/main/java/br/com/alurafood/pagamentos/controller/PagamentoController.java,7/c/7cc899c8dee83de5d5f3f963d4fa054205c269a4
+‚
+Rpagamentos/src/main/java/br/com/alurafood/pagamentos/service/PagamentoService.java,5/1/51171d17a918a4b0c2acb53498333fdb6fce614e
+
+Opagamentos/src/main/java/br/com/alurafood/pagamentos/PagamentosApplication.java,a/f/af21c487e0c8b260b65107fe0ec837204c881eb8
+B
+pagamentos/pom.xml,f/b/fb1ca7313fdcbb0ef2637cc113c4cd811856bccf
+‰
+Ypagamentos/src/main/java/br/com/alurafood/pagamentos/amqp/PagamentoAMQPConfiguration.java,f/9/f9353c1aba89c84285672777a54ca501d99f829b
