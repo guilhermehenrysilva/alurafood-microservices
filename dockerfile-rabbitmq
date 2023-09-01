@@ -1,2 +1,7 @@
 FROM rabbitmq:latest
-RUN rabbitmq-plugins enable --offline rabbitmq_management rabbitmq_web_stomp
+RUN rabbitmq-plugins enable --offline rabbitmq_management rabbitmq_web_stomp rabbitmq_shovel rabbitmq_shovel_management
+
+###Plugins
+#rabbitmq_management: Console localhost:15673
+#rabbitmq_web_stomp: WebSocket
+#rabbitmq_shovel rabbitmq_shovel_management: Mover mensagens entre as filas pelo console
