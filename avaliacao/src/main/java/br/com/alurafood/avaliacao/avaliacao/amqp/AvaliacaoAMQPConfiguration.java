@@ -23,8 +23,7 @@ public class AvaliacaoAMQPConfiguration {
     }
 
     @Bean
-    public RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory,
-                                         Jackson2JsonMessageConverter messageConverter){
+    public RabbitTemplate rabbitTemplate(ConnectionFactory connectionFactory, Jackson2JsonMessageConverter messageConverter){
         RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
         rabbitTemplate.setMessageConverter(messageConverter);
         return  rabbitTemplate;
@@ -34,6 +33,14 @@ public class AvaliacaoAMQPConfiguration {
     public Queue filaDetalhesAvaliacao() {
         return QueueBuilder
                 .nonDurable("pagamentos.detalhes-avaliacao")
+                .deadLetterExchange("pagamentos.dlx")
+                .build();
+    }
+
+    @Bean
+    public Queue filaDlqDetalhesAvaliacao() {
+        return QueueBuilder
+                .nonDurable("pagamentos.detalhes-avaliacao-dlq")
                 .build();
     }
 
@@ -45,10 +52,24 @@ public class AvaliacaoAMQPConfiguration {
     }
 
     @Bean
-    public Binding bindPagamentoPedido(FanoutExchange fanoutExchange) {
+    public FanoutExchange deadLetterExchange() {
+        return ExchangeBuilder
+                .fanoutExchange("pagamentos.dlx")
+                .build();
+    }
+
+    @Bean
+    public Binding bindPagamentoPedido() {
         return BindingBuilder
                 .bind(filaDetalhesAvaliacao())
                 .to(fanoutExchange());
+    }
+
+    @Bean
+    public Binding bindDlxPagamentoPedido() {
+        return BindingBuilder
+                .bind(filaDlqDetalhesAvaliacao())
+                .to(deadLetterExchange());
     }
 
     @Bean
